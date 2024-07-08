@@ -5,15 +5,15 @@ dotenv.config();
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 cloudinary.config({
-  cloud_name: "demo4g1qf",
-  api_key: "433437319416881",
-  api_secret: "e2VMYNVJMJaNPa9AghB4_FXVtp8"
+  cloud_name: "",
+  api_key: "",
+  api_secret: ""
 
 });
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
    destination: function (req, file, cb) {
-    cb(null, '/ECO-ONLINE-FOLDER'); 
+    cb(null, '/'); 
   },
   filename: function (req, file, cb) {
     // Generate a unique filename for the uploaded image (you can use a library like 'uuid' for this)
